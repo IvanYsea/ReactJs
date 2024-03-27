@@ -1,10 +1,20 @@
-import ButtonsComponents from "./ButtonsComponents";
+import ButtonsComponents from "../ButtonsComponents";
+import NavBar from '../navbar/NavBar'
+import '../App.css'
+
+
 
 export default function CardsComponents({}) {
-  const character = [{ color: "peru", texto: "Añadir al carrito" }];
+  const character = [
+    { color: "peru", texto: "Añadir al carrito", texto1: "Detalles" },
+  ];
 
   return (
     <>
+
+   <NavBar/>
+
+
       <div class="container-items">
         <div class="item">
           <figure>
@@ -17,7 +27,9 @@ export default function CardsComponents({}) {
             <h5>RTX 3060</h5>
             <p class="price">$500</p>
             {/* /* <button class="btn-add-cart">Añadir al carrito</button> */}
+            {/* <button>Detalles</button> */}
             <ButtonsComponents
+              texto1={character[0].texto1}
               color={character[0].color}
               texto={character[0].texto}
             />
@@ -31,9 +43,10 @@ export default function CardsComponents({}) {
             />
           </figure>
           <div class="info-product">
-            <h5>Procesador i5</h5>
+            <h5>Procesador i7</h5>
             <p class="price">$200</p>
             <ButtonsComponents
+              texto1={character[0].texto1}
               color={character[0].color}
               texto={character[0].texto}
             />
@@ -50,6 +63,7 @@ export default function CardsComponents({}) {
             <h5>Monitor 144Hz</h5>
             <p class="price">$150</p>
             <ButtonsComponents
+              texto1={character[0].texto1}
               color={character[0].color}
               texto={character[0].texto}
             />
@@ -66,6 +80,7 @@ export default function CardsComponents({}) {
             <h5>Mouse Logitech</h5>
             <p class="price">$60</p>
             <ButtonsComponents
+              texto1={character[0].texto1}
               color={character[0].color}
               texto={character[0].texto}
             />
@@ -82,6 +97,7 @@ export default function CardsComponents({}) {
             <h5>Auriculares HypereX</h5>
             <p class="price">$50</p>
             <ButtonsComponents
+              texto1={character[0].texto1}
               color={character[0].color}
               texto={character[0].texto}
             />
